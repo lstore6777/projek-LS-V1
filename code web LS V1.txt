@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luckstore</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#1b120d;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#2a1b13;
+  z-index:999;
+}
+
+.logo{
+  font-size:35px;
+  font-weight:700;
+  color:#ffb347;
+}
+
+nav ul{
+  display:flex;
+  gap:35px;
+  list-style:none;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ffb347;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  background:
+  linear-gradient(to bottom,#4b2e1f,#1b120d);
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero h1{
+  font-size:75px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:24px;
+  color:#fcd9b0;
+  margin-bottom:40px;
+}
+
+.status{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.status-box{
+  background:#2f1d14;
+  border:1px solid #5a3822;
+  padding:15px 25px;
+  border-radius:15px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.menu-btn{
+  padding:16px 35px;
+  border:none;
+  border-radius:15px;
+  color:white;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.menu-btn:hover{
+  transform:scale(1.05);
+}
+
+.robux-btn{
+  background:#d97706;
+}
+
+.cdid-btn{
+  background:#374151;
+}
+
+.gamepass-btn{
+  background:#991b1b;
+}
+
+/* SECTION */
+
+section{
+  max-width:1400px;
+  margin:auto;
+  padding:100px 20px;
+}
+
+.title{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:50px;
+  color:#ffcc70;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#22140c;
+  border:1px solid #5a3822;
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(255,170,0,0.2);
+}
+
+.card h2{
+  margin-bottom:15px;
+  font-size:28px;
+}
+
+.price{
+  color:#ffcc70;
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.buy{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#d97706;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.buy:hover{
+  background:#f59e0b;
+}
+
+/* INPUT */
+
+.input-box{
+  max-width:500px;
+  margin:0 auto 40px auto;
+}
+
+.input-box input,
+.input-box select{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:15px;
+  margin-bottom:15px;
+  background:#22140c;
+  color:white;
+  font-size:17px;
+}
+
+/* PAYMENT */
+
+.payment{
+  margin-top:60px;
+}
+
+.payment h3{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:30px;
+}
+
+.wallets{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.wallet{
+  background:white;
+  width:160px;
+  height:110px;
+  border-radius:18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.wallet img{
+  width:100px;
+}
+
+/* TESTIMONI */
+
+.testimoni{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.testi-card{
+  background:#22140c;
+  border:1px solid #5a3822;
+  border-radius:18px;
+  padding:25px;
+}
+
+/* FOOTER */
+
+footer{
+  background:black;
+  text-align:center;
+  padding:40px 20px;
+}
+
+footer p{
+  margin-top:10px;
+  color:#d1b08d;
+}
+
+/* WA */
+
+.wa{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-decoration:none;
+  font-size:35px;
+  z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav ul{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+  Luckstore
+</div>
+
+<ul>
+  <li><a href="#robux">Robux</a></li>
+  <li><a href="#cdid">Joki CDID</a></li>
+  <li><a href="#gamepass">Gamepass</a></li>
+  <li><a href="#testi">Testimoni</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>Selamat Datang Di Luckstore</h1>
+
+<p>
+Website Top Up Robux Murah, Cepat & Trusted
+</p>
+
+<div class="status">
+
+<div class="status-box">
+✔ Trusted Seller
+</div>
+
+<div class="status-box">
+⚡ Fast Response
+</div>
+
+<div class="status-box">
+👥 1200+ Transaksi
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="menu-btn robux-btn"
+onclick="scrollToSection('robux')">
+Top Up Robux
+</button>
+
+<button class="menu-btn cdid-btn"
+onclick="scrollToSection('cdid')">
+Joki CDID
+</button>
+
+<button class="menu-btn gamepass-btn"
+onclick="scrollToSection('gamepass')">
+Gamepass CDID
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ROBUX -->
+
+<section id="robux">
+
+<h2 class="title">
+Top Up Robux
+</h2>
+
+<div class="input-box">
+
+<input
+type="text"
+id="username"
+placeholder="Masukkan Username Roblox"
+>
+
+<select id="payment">
+
+<option>DANA</option>
+<option>OVO</option>
+<option>GoPay</option>
+<option>ShopeePay</option>
+
+</select>
+
+</div>
+
+<div class="grid" id="robuxGrid"></div>
+
+</section>
+
+<!-- CDID -->
+
+<section id="cdid">
+
+<h2 class="title">
+Joki CDID
+</h2>
+
+<div class="grid" id="cdidGrid"></div>
+
+</section>
+
+<!-- GAMEPASS -->
+
+<section id="gamepass">
+
+<h2 class="title">
+Gamepass CDID
+</h2>
+
+<div class="grid" id="gamepassGrid"></div>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section>
+
+<h2 class="title">
+Metode Pembayaran
+</h2>
+
+<div class="wallets">
+
+<div class="wallet">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg">
+</div>
+
+<div class="wallet">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg">
+</div>
+
+<div class="wallet">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg">
+</div>
+
+<div class="wallet">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg">
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTI -->
+
+<section id="testi">
+
+<h2 class="title">
+Testimoni Customer
+</h2>
+
+<div class="testimoni">
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"Store paling TOP soal ngejoki CDID"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"beli GP ga sampe 20 menit GACOR BGT"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"WKWKWK DIKASIH BONUS ROBUX BJIR"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"Admintnya sangat ramah cuyy"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"Joki cedid di kasih bonus banyak bangett"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"Admin Fastresp bgt"
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ <br><br>
+"Terbaeekkk ni Store 👍"
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Luckstore © 2023</h2>
+
+<p>Fast Response 24 Jam</p>
+
+<p>WhatsApp : 081325271899</p>
+
+</footer>
+
+<!-- WA -->
+
+<a
+href="https://wa.me/6281325271899"
+target="_blank"
+class="wa"
+>
+💬
+</a>
+
+<script>
+
+function scrollToSection(id){
+
+document.getElementById(id)
+.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+/* ROBUX */
+
+const robuxList = [
+100,200,300,400,500,
+600,700,800,900,1000
+];
+
+const robuxGrid =
+document.getElementById("robuxGrid");
+
+robuxList.forEach((robux)=>{
+
+const card =
+document.createElement("div");
+
+card.className = "card";
+
+card.innerHTML = `
+<h2>${robux} Robux</h2>
+
+<div class="price">
+Rp ${(robux*140).toLocaleString("id-ID")}
+</div>
+
+<button class="buy"
+onclick="buyRobux(${robux})">
+Beli
+</button>
+`;
+
+robuxGrid.appendChild(card);
+
+});
+
+/* CDID */
+
+const cdidList = [
+10,20,30,40,50,
+60,70,80,90,100,
+200,300,400,500,
+600,700,800,900
+];
+
+const cdidGrid =
+document.getElementById("cdidGrid");
+
+cdidList.forEach((m)=>{
+
+const card =
+document.createElement("div");
+
+card.className = "card";
+
+card.innerHTML = `
+<h2>${m}M</h2>
+
+<div class="price">
+Rp ${(m*1400).toLocaleString("id-ID")}
+</div>
+
+<button class="buy"
+onclick="buyCDID(${m})">
+Pesan
+</button>
+`;
+
+cdidGrid.appendChild(card);
+
+});
+
+/* GAMEPASS */
+
+const gamepassList = [
+
+["DARURAT","20.000"],
+["RETRO","20.000"],
+["LANGKA","25.000"],
+["MEWAH","30.000"],
+["BENGKEL","30.000"],
+["2XJOB/PAY","40.000"],
+["SLOT CAR X1","15.000"],
+["SLOT CAR X2","30.000"],
+["RUMAH","15.000"]
+
+];
+
+const gamepassGrid =
+document.getElementById("gamepassGrid");
+
+gamepassList.forEach((item)=>{
+
+const card =
+document.createElement("div");
+
+card.className = "card";
+
+card.innerHTML = `
+<h2>${item[0]}</h2>
+
+<div class="price">
+Rp ${item[1]}
+</div>
+
+<button class="buy"
+onclick="buyGamepass('${item[0]}')">
+Beli
+</button>
+`;
+
+gamepassGrid.appendChild(card);
+
+});
+
+function buyRobux(robux){
+
+const username =
+document.getElementById("username").value;
+
+const payment =
+document.getElementById("payment").value;
+
+if(username === ""){
+
+alert("Masukkan Username Roblox!");
+return;
+
+}
+
+const text =
+`Halo admin Luckstore,
+
+Saya mau beli ${robux} Robux
+
+Username Roblox : ${username}
+
+Metode Pembayaran : ${payment}`;
+
+const url =
+`https://api.whatsapp.com/send?phone=6281325271899&text=${encodeURIComponent(text)}`;
+
+window.open(url,'_blank');
+
+}
+
+function buyCDID(m){
+
+const text =
+`Halo admin Luckstore,
+
+Saya mau joki cdid ${m}M`;
+
+const url =
+`https://api.whatsapp.com/send?phone=6281325271899&text=${encodeURIComponent(text)}`;
+
+window.open(url,'_blank');
+
+}
+
+function buyGamepass(name){
+
+const text =
+`Halo admin Luckstore,
+
+Saya mau beli ${name}`;
+
+const url =
+`https://api.whatsapp.com/send?phone=6281325271899&text=${encodeURIComponent(text)}`;
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
